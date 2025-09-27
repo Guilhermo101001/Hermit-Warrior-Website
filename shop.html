@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IronCore Fitness Shop</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+    body{background:#0d0d0d;color:#f2f2f2;}
+    a{text-decoration:none;color:inherit;}
+    header{background:#1a1a1a;color:#f2f2f2;padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;border-bottom:2px solid #c9a227;}
+    header h1{color:#ffd700;font-size:1.5rem;letter-spacing:2px;}
+    nav ul{display:flex;list-style:none;gap:1.5rem;}
+    nav ul li a:hover{color:#c0c0c0;transition:0.3s;}
+    .categories{display:flex;justify-content:center;gap:2rem;padding:2rem;flex-wrap:wrap;}
+    .category-btn{background:#ffd700;color:#000;padding:.7rem 1.5rem;border-radius:5px;font-weight:bold;cursor:pointer;transition:.3s;}
+    .category-btn:hover{background:#c9a227;}
+    .product-section{padding:2rem;}
+    .product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+    .product-card{background:#1a1a1a;border:1px solid #333;border-radius:10px;overflow:hidden;transition:transform .3s;}
+    .product-card:hover{transform:translateY(-5px);border-color:#ffd700;}
+    .product-card img{width:100%;height:200px;object-fit:cover;}
+    .product-card h4{text-align:center;margin:1rem 0;color:#fff;}
+    .product-card p{text-align:center;font-size:.9rem;color:#ccc;padding:0 1rem;}
+    .product-card .btn{display:block;margin:1rem auto;text-align:center;background:#ffd700;color:#000;padding:.7rem 1.5rem;border-radius:5px;font-weight:bold;width:80%;cursor:pointer;transition:.3s;}
+    .product-card .btn:hover{background:#c9a227;}
+    footer{background:#1a1a1a;color:#ccc;text-align:center;padding:1rem;border-top:2px solid #c9a227;margin-top:3rem;}
+    .hidden{display:none;}
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>IRONCORE FITNESS</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="categories">
+  <button class="category-btn" data-category="waterbottles">Water Bottles</button>
+  <button class="category-btn" data-category="belts">Lifting Belts</button>
+  <button class="category-btn" data-category="bands">Resistance Bands</button>
+  <button class="category-btn" data-category="apparel">Apparel</button>
+</div>
+
+<section class="product-section" id="waterbottles">
+  <h2 style="color:#ffd700;text-align:center;margin-bottom:1rem;">Water Bottles</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1598971639058-5f0392e8d7c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="2L Sports Water Bottle">
+      <h4>2L Sports Water Bottle</h4>
+      <p>Durable, leak-proof, stay hydrated during heavy lifts.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="product-section hidden" id="belts">
+  <h2 style="color:#ffd700;text-align:center;margin-bottom:1rem;">Lifting Belts</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1599058917212-d750089bc03e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Lifting Waist Belt">
+      <h4>Lifting Waist Belt</h4>
+      <p>Maximize your strength and protect your core during lifts.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="product-section hidden" id="bands">
+  <h2 style="color:#ffd700;text-align:center;margin-bottom:1rem;">Resistance Bands</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1599058917765-3f908db8b27d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Resistance Bands">
+      <h4>High-Performance Bands</h4>
+      <p>Perfect for warm-ups, accessory work, and strength training.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="product-section hidden" id="apparel">
+  <h2 style="color:#ffd700;text-align:center;margin-bottom:1rem;">Apparel</h2>
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618354694525-3a7e0a3e14a1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Gym Shorts">
+      <h4>Gym Shorts</h4>
+      <p>Breathable, stretchy, and gym-ready for every workout.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1594737625785-3b2c2e9110a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hoodie">
+      <h4>Training Hoodie</h4>
+      <p>Oversized comfort hoodie for warm-ups and post-workout wear.</p>
+      <button class="btn">Buy Now</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 IronCore Fitness | All Rights Reserved</p>
+</footer>
+
+<script>
+  const categoryButtons = document.querySelectorAll('.category-btn');
+  const sections = document.querySelectorAll('.product-section');
+  categoryButtons.forEach(button=>{
+    button.addEventListener('click',()=>{
+      const category=button.getAttribute('data-category');
+      sections.forEach(sec=>{
+        if(sec.id===category){sec.classList.remove('hidden');}else{sec.classList.add('hidden');}
+      });
+      window.scrollTo({top:0,behavior:'smooth'});
+    });
+  });
+  const buyButtons=document.querySelectorAll('.btn');
+  buyButtons.forEach(btn=>btn.addEventListener('click',()=>{alert('This will take you to checkout or product page soon!');}));
+</script>
+
+</body>
+</html>
